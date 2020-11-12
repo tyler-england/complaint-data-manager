@@ -83,7 +83,7 @@ Exit Function
 
 errhandler:
 MsgBox "Error in CheckDB function"
-
+Call ErrorRep("CheckDB", "Function", CheckDB, Err.Number, Err.Description, "")
 End Function
 
 Function CheckForClaim(ccNo As String) As Boolean
@@ -121,7 +121,7 @@ Exit Function
 
 errhandler:
 MsgBox "Error in CheckForClaim function"
-
+Call ErrorRep("CheckForClaim", "Function", CheckForClaim, Err.Number, Err.Description, "")
 End Function
 
 Function ShowAllClaimInfo(ccNo As String)
@@ -261,7 +261,7 @@ Exit Function
 errhandler:
 
 MsgBox "Error in ShowAllClaimInfo function"
-
+Call ErrorRep("ShowAllClaimInfo", "Function", "N/A", Err.Number, Err.Description, "")
 End Function
 
 Function ClearSheet(rowNum As Integer)
@@ -322,7 +322,7 @@ Exit Function
 
 errhandler:
 MsgBox "Error in ClearSheet function"
-
+Call ErrorRep("ClearSheet", "Function", "N/A", Err.Number, Err.Description, "")
 End Function
 
 Sub ModifyDB()
@@ -612,5 +612,5 @@ Exit Sub
 
 errhandler:
 MsgBox "Error in ModifyDB sub"
-
+Call ErrorRep("ModifyDB", "Sub", "N/A", Err.Number, Err.Description, "")
 End Sub

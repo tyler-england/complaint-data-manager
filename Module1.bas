@@ -253,6 +253,7 @@ Exit Sub
 errhandler:
     MsgBox "Error in AddEntryToDB sub"
     Application.ScreenUpdating = True
+    Call ErrorRep("AddEntryToDB", "Sub", "N/A", Err.Number, Err.Description, "")
 End Sub
 
 Function CheckTable() As Integer
@@ -386,6 +387,7 @@ Exit Function
 
 errhandler:
     MsgBox "Error in CheckTable function"
+    Call ErrorRep("CheckTable", "Function", CheckTable, Err.Number, Err.Description, "")
 End Function
 
 Function AlphaSort(newText As String, exText As String) As Boolean
@@ -428,6 +430,7 @@ End If
 Exit Function
 errhandler:
     MsgBox "Error in AlphaSort function"
+    Call ErrorRep("AlphaSort", "Function", AlphaSort, Err.Number, Err.Description, newText & "   " & exText)
 End Function
 
 Sub NewComplaintCat()
@@ -534,4 +537,5 @@ MsgBox newText & " successfully added! " & newText & " can now be chosen from th
 Exit Sub
 errhandler:
     MsgBox "Errror in AddToList function"
+    Call ErrorRep("AddToList", "Sub", "N/A", Err.Number, Err.Description, "")
 End Sub

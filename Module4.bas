@@ -377,7 +377,7 @@ Range("A1").Select
 Exit Function
 errhandler:
 MsgBox "Error in GenerateReport sub"
-
+Call ErrorRep("GenerateReport", "Sub", "N/A", Err.Number, Err.Description, "")
 End Function
 
 Sub updatedata()
